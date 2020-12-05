@@ -33,3 +33,37 @@
 ## visuelles Konzept
 
 ## Reccourcen
+ - Tilesets
+     - 16x16
+       - DawnLike - 16x16 Universal Rogue-like tileset v1.81  
+         https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181  
+         Umfangreiches Tileset mit hübschen Farben in 16x16 look  
+         CC-BY-4.0
+       - Lots of free 2d tiles and sprites by Hyptosis  
+         https://www.newgrounds.com/art/view/hyptosis/tile-art-batch-1  
+         CC-BY-3.0
+       - https://opengameart.org/content/the-field-of-the-floating-islands
+       - https://opengameart.org/content/dungeon-tileset
+       - Cave tileset  
+         https://opengameart.org/content/cave-tileset-0  
+         CC-BY-3.0 GPL-2.0
+       - https://opengameart.org/content/colony-sim-extended-version
+     - 32x32
+       - https://github.com/I-am-Erk/CDDA-Tilesets  
+         CC-BY-SA-3.0
+       - Tilemap template for Krita Tiled and Photoshop  
+         https://github.com/GDQuest/krita-tileset-templates  
+         CC-BY-4.0
+       - RPG Nature Tileset - Seasons  
+         https://stealthix.itch.io/rpg-nature-tileset  
+         CC-0
+       - 32x32 Basic Tileset Map  
+         https://evan-fix.itch.io/32x32-basic-tileset  
+         "You can use this freely without restrictions."
+       - 32x32 (and 16x16) RPG Tiles--Forest and some Interior Tiles  
+         https://opengameart.org/content/32x32-and-16x16-rpg-tiles-forest-and-some-interior-tiles  
+         CC-BY-3.0
+       - LPC: Modified base tiles  
+         has some chairs+couches etc  
+         https://opengameart.org/content/lpc-modified-base-tiles  
+         CC-BY-3.0 CC-BY-SA-3.0 GPL-3.0
