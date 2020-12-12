@@ -19,6 +19,8 @@ review:
 
 stop_review:
   stage: deploy
+  variables:
+    GIT_STRATEGY: none
   script:
   - cmd=$(jq -nc --arg env "$CI_ENVIRONMENT_SLUG" '{action:"destroy",environment:$env}')
   - ssh -i "$DEPLOY_KEY" -o UserKnownHostsFile="$KNOWN_HOSTS" gitlab@wa.c3auti.jorrit.de "$cmd"
