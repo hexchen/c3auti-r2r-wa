@@ -67,3 +67,8 @@
          has some chairs+couches etc  
          https://opengameart.org/content/lpc-modified-base-tiles  
          CC-BY-3.0 CC-BY-SA-3.0 GPL-3.0
+     - Nicht frei/verfügbar, aber gut für Inspiration
+       - Time Fantasy: The Giant Tree
+         https://finalbossblues.itch.io/giant-tree
+         Nur noch Vorschaubilder zu sehen, aber geben eine Idee wie das
+         tileset funktioniert
