@@ -1,0 +1,32 @@
+image: alpine
+
+before_script:
+- apk add jq openssh-client
+- chmod go= "$DEPLOY_KEY"
+
+review:
+  stage: deploy
+  script:
+  - tar -czf .public.tar.gz *
+  - cmd=$(jq -nc --arg env "$CI_ENVIRONMENT_SLUG" '{action:"deploy",environment:$env}')
+  - ssh -i "$DEPLOY_KEY" -o UserKnownHostsFile="$KNOWN_HOSTS" gitlab@wa.c3auti.jorrit.de "$cmd" <.public.tar.gz
+  environment:
+    name: $CI_COMMIT_REF_NAME
+    url: https://play.wa-test.rc3.cccv.de/_/global/wa.c3auti.jorrit.de/$CI_ENVIRONMENT_SLUG/helpdesk.json
+    on_stop: stop_review
+  only:
+    - branches
+
+stop_review:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  script:
+  - cmd=$(jq -nc --arg env "$CI_ENVIRONMENT_SLUG" '{action:"destroy",environment:$env}')
+  - ssh -i "$DEPLOY_KEY" -o UserKnownHostsFile="$KNOWN_HOSTS" gitlab@wa.c3auti.jorrit.de "$cmd"
+  when: manual
+  environment:
+    name: $CI_COMMIT_REF_NAME
+    action: stop
+  only:
+    - branches
