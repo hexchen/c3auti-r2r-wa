@@ -72,3 +72,6 @@
          https://finalbossblues.itch.io/giant-tree
          Nur noch Vorschaubilder zu sehen, aber geben eine Idee wie das
          tileset funktioniert
+ - Farbschema  
+   Erstellt von betalars
+   ![](farbschema.png)
