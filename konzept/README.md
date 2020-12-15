@@ -19,13 +19,12 @@
 ## funktionelles Konzept
  - Ein holer Baumstamm mit reichlich platz im innern
  - Verschiedenen Ebenen, innerhalb und außerhalb des Baumstamms, verbunden duch eine
-   Wendeltreppe
+   Wendeltreppe (mit Abkürzung (Fahrstuhl?) zwischen Helpdesk und quiet-cube)
  - Jede Ebene realisiert duch eine eigene Map
  - Von oben nach unten:
    - Quiet Cube mit Kids Area und Spieleecke
    - Veranstaltungsraum
-   - Portal-Raum mit Verbindungen zur Außenwelt
-   - Helpdesk und "I need Support"-Ecke
+   - Helpdesk mit Portalen und "I need Support"-Ecke
    - Ruheraum (im Wurzelwerk)
  - Verteilung der Sitzecken auf Äste, um sie etwas vom Durchgansverkehr abzuschirmen (für das große ganze nehmen wir aber eher betalars' Konzept):
    ![](sitzecken.jpg)
