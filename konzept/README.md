@@ -72,5 +72,4 @@
          Nur noch Vorschaubilder zu sehen, aber geben eine Idee wie das
          tileset funktioniert
  - Farbschema  
-   Erstellt von betalars
-   ![](farbschema.png)
+   See directory [art_direction](../art_direction) on top level.
