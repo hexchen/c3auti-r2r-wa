@@ -154,7 +154,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"portal.json#unten"
+                 "value":"veranstaltung.json#unten"
                 }],
          "type":"tilelayer",
          "visible":true,

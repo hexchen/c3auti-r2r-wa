@@ -148,7 +148,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"portal.json#oben"
+                 "value":"helpdesk.json#oben"
                 }],
          "type":"tilelayer",
          "visible":true,

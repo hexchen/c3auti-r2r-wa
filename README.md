@@ -2,6 +2,9 @@
 
 Konzept ist hier: [konzept/README.md](konzept/README.md)
 
+There is also a Konzept for a visual style under
+[art_direction/style_and_colors.svg](art_direction/style_and_colors.svg).
+
 ## Preview
 
 Für master hier:
