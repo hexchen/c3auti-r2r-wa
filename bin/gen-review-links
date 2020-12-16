@@ -9,7 +9,7 @@ hq() {
     printf %s "$text"
 }
 
-cccv=https://play.wa-test.rc3.cccv.de/_/global/wa.c3auti.jorrit.de/$CI_ENVIRONMENT_SLUG
+cccv=https://test.visit.at.wa-test.rc3.cccv.de/_/global/wa.c3auti.jorrit.de/$CI_ENVIRONMENT_SLUG
 wa=https://play.workadventu.re/_/global/wa.c3auti.jorrit.de/$CI_ENVIRONMENT_SLUG
 
 cat <<EOF
