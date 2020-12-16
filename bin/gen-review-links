@@ -1,0 +1,30 @@
+#!/bin/bash
+
+hq() {
+    declare text="$1"
+    text=${text//&/&amp;}
+    text=${text//\"/&quot;}
+    text=${text//</&lt;}
+    text=${text//>/&gt;}
+    printf %s "$text"
+}
+
+cccv=https://play.wa-test.rc3.cccv.de/_/global/wa.c3auti.jorrit.de/$CI_ENVIRONMENT_SLUG
+wa=https://play.workadventu.re/_/global/wa.c3auti.jorrit.de/$CI_ENVIRONMENT_SLUG
+
+cat <<EOF
+<html>
+<body>
+<h1>Review links for branch $(hq $CI_COMMIT_BRANCH)</h1>
+<itemize>
+EOF
+for room in *.json; do
+    cat <<EOF
+<li><a href="$(hq "$cccv/$room")">CCCV</a> | <a href="$(hq "$wa/$room")">WA</a> | $(hq "${room%.json}")</li>
+EOF
+done
+cat <<EOF
+</itemize>
+</body>
+</html>
+EOF
