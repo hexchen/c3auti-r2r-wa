@@ -1,7 +1,7 @@
 all:						\
 	branches-32x32s.png			\
 	furniture-logs-32x32s.png		\
-	moss-32x32s.png
+	grass-32x32s.png
 .PHONY: all
 
 %-32x32s.png: %.kra
