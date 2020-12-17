@@ -1,5 +1,6 @@
 all:						\
 	branches-32x32s.png			\
+	escher1-32x32s.png			\
 	furniture-logs-32x32s.png		\
 	grass-32x32s.png			\
 	leaves-32x32s.png			\
