@@ -194,7 +194,7 @@
          "opacity":0,
          "properties":[
                 {
-                 "name":"exitSceneUrl",
+                 "name":"exitUrl",
                  "type":"string",
                  "value":"veranstaltung.json#entry-up"
                 }],
