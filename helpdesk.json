@@ -338,11 +338,11 @@
         {
          "columns":1,
          "firstgid":940,
-         "image":"tilesets\/c3auti\/escher1-32x32s.png",
+         "image":"tilesets\/c3auti\/escher1_lowcontrast-32x32s.png",
          "imageheight":64,
          "imagewidth":32,
          "margin":0,
-         "name":"escher1-32x32s",
+         "name":"escher1_lowcontrast-32x32s",
          "spacing":0,
          "tilecount":2,
          "tileheight":32,
