@@ -1,15 +1,12 @@
 all:						\
 	branches-32x32s.png			\
-	bridge_logs_hori-32x32s.png		\
-	bridge_logs_vert-32x32s.png		\
-	bridge_planks_hori-32x32s.png		\
-	bridge_planks_vert-32x32s.png		\
 	escher-32x32s.png			\
 	furniture-logs-32x32s.png		\
 	grass-32x32s.png			\
 	lanterns-32x32s.png			\
 	leaves-32x32s.png			\
 	moss-cracks-32x32s.png			\
+	wood-bridge-32x32s.png			\
 	wood-floor-32x32s.png
 .PHONY: all
 
