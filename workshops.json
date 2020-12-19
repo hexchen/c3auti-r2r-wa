@@ -196,7 +196,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"quiet-cube.json#entry-down"
+                 "value":"quiet-lounge.json#entry-down"
                 }],
          "type":"tilelayer",
          "visible":true,

@@ -232,7 +232,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"veranstaltung.json#entry-up"
+                 "value":"workshops.json#entry-up"
                 }],
          "type":"tilelayer",
          "visible":true,
