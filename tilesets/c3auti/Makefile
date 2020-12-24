@@ -6,6 +6,7 @@ all:						\
 	lanterns-32x32s.png			\
 	leaves-32x32s.png			\
 	moss-cracks-32x32s.png			\
+	nox-32x32s.png				\
 	wood-bridge-32x32s.png			\
 	wood-floor-32x32s.png
 .PHONY: all
