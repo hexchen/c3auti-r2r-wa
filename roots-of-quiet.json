@@ -136,7 +136,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"helpdesk.json#entry-down"
+                 "value":"main.json#entry-down"
                 }],
          "type":"tilelayer",
          "visible":true,
