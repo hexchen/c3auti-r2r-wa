@@ -9,22 +9,35 @@ hq() {
     printf %s "$text"
 }
 
-cccv=https://test.visit.at.wa-test.rc3.cccv.de/_/global/wa.c3auti.jorrit.de/$CI_ENVIRONMENT_SLUG
-wa=https://play.workadventu.re/_/global/wa.c3auti.jorrit.de/$CI_ENVIRONMENT_SLUG
+declare -A instances=(
+    [CCCV A]=https://test.visit.at.wa-test.rc3.cccv.de/_/global
+    [CCCV B]=https://test.visit.at.wb-test.rc3.cccv.de/_/global
+    [workadventu.re]=https://play.workadventu.re/_/global
+)
 
 cat <<EOF
 <html>
 <body>
 <h1>Review links for branch $(hq $CI_COMMIT_BRANCH)</h1>
-<itemize>
+<table>
 EOF
 for room in *.json; do
     cat <<EOF
-<li><a href="$(hq "$cccv/$room")">CCCV</a> | <a href="$(hq "$wa/$room")">WA</a> | $(hq "${room%.json}")</li>
+<tr>
+<td>$(hq "${room%.json}")</td>
+EOF
+    for name in "${!instances[@]}"; do
+        url=${instances[$name]}/wa.c3auti.jorrit.de/$CI_ENVIRONMENT_SLUG/$room
+        cat <<EOF
+<td><a href="$(hq "$url")">$(hq "$name")</a></td>
+EOF
+    done
+    cat <<EOF
+</tr>
 EOF
 done
 cat <<EOF
-</itemize>
+</table>
 </body>
 </html>
 EOF
