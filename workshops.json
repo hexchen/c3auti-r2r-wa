@@ -142,7 +142,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"roots-of-quiet.json#entry-up"
+                 "value":"main.json#entry-up"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -160,7 +160,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"workshops.json#entry-down"
+                 "value":"quiet-lounge.json#entry-down"
                 }],
          "type":"tilelayer",
          "visible":true,
