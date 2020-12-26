@@ -49,7 +49,7 @@ Quiet lounge concept, VCS infrastructure.
 
 # kitzune
 
-![](tilesets/c3auti/CCL-carpet-tile-color-calm.png)
+![](tilesets/c3auti/kitzune.png)
 
 ## Marley Nox
 
