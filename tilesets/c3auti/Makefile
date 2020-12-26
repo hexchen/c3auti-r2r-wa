@@ -1,10 +1,10 @@
 all:						\
 	branches-32x32s.png			\
-	CCL-carpet-tile-color-calm-32x32s.png	\
 	escher-32x32s.png			\
 	furniture-logs-32x32s.png		\
 	grass-32x32s.png			\
 	interior_walls-32x32s.png		\
+	kitzune-32x32s.png			\
 	lanterns-32x32s.png			\
 	leaves-32x32s.png			\
 	moss-cracks-32x32s.png			\
