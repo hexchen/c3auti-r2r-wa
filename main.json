@@ -170,12 +170,6 @@
          "id":7,
          "name":"start",
          "opacity":0.04,
-         "properties":[
-                {
-                 "name":"startLayer",
-                 "type":"bool",
-                 "value":false
-                }],
          "type":"tilelayer",
          "visible":true,
          "width":40,
