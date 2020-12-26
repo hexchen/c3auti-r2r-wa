@@ -10,6 +10,7 @@ all:						\
 	moss-cracks-32x32s.png			\
 	nox-32x32s.png				\
 	tmp-32x32s.png				\
+	trunk_stairs-32x32s.png			\
 	wood-bridge-32x32s.png			\
 	wood-floor-32x32s.png
 .PHONY: all
