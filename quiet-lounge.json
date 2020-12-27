@@ -245,7 +245,7 @@
          "height":96,
          "id":205,
          "name":"collision",
-         "opacity":0.57,
+         "opacity":0,
          "type":"tilelayer",
          "visible":true,
          "width":96,
@@ -257,7 +257,7 @@
          "height":96,
          "id":227,
          "name":"silent",
-         "opacity":0.45,
+         "opacity":0,
          "properties":[
                 {
                  "name":"silent",
