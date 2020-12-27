@@ -214,7 +214,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"{<lobby>\/c3oc.json#start_c3auti}"
+                 "value":"{<lobby>\/maps\/c3oc.json#start_c3auti}"
                 }],
          "type":"tilelayer",
          "visible":true,
