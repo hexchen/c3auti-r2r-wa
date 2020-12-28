@@ -10,6 +10,7 @@ all:						\
 	leaves-32x32s.png			\
 	moss-cracks-32x32s.png			\
 	nox-32x32s.png				\
+	phrases-32x32s.png			\
 	tmp-32x32s.png				\
 	trunk_stairs-32x32s.png			\
 	trunk_wip-32x32s.png			\
