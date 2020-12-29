@@ -5,6 +5,7 @@ all:						\
 	furniture-logs-32x32s.png		\
 	grass-32x32s.png			\
 	interior_walls-32x32s.png		\
+	helpdesk-32x32s.png			\
 	kitzune-32x32s.png			\
 	lanterns-32x32s.png			\
 	leaves-32x32s.png			\
