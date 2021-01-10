@@ -27,7 +27,7 @@ for room in *.json; do
 <td>$(hq "${room%.json}")</td>
 EOF
     for name in "${!instances[@]}"; do
-        url=${instances[$name]}/wa.c3auti.jorrit.de/$CI_ENVIRONMENT_SLUG/$room
+        url=${instances[$name]}/c3auti.gitlab.io/rc3-wa-rendered/$CI_ENVIRONMENT_SLUG/$room
         cat <<EOF
 <td><a href="$(hq "$url")">$(hq "$name")</a></td>
 EOF
