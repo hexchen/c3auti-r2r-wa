@@ -1,34 +1,50 @@
 image: alpine
 
-before_script:
-- apk add jq openssh-client
-- chmod go= "$DEPLOY_KEY"
+variables:
+  RENDER_REPO: git@gitlab.com:c3auti/rc3-wa-rendered.git
 
-review:
+utils:
+  stage: .pre
+  script: "true"
+  artifacts:
+    paths:
+      - bin/destroy
+
+.deploy-base:
   stage: deploy
-  script:
-  - apk add bash
-  - bin/gen-review-links >index.html
-  - tar -czf .public.tar.gz *
-  - cmd=$(jq -nc --arg env "$CI_ENVIRONMENT_SLUG" '{action:"deploy",environment:$env}')
-  - ssh -i "$DEPLOY_KEY" -o UserKnownHostsFile="$KNOWN_HOSTS" gitlab@wa.c3auti.jorrit.de "$cmd" <.public.tar.gz
-  environment:
-    name: $CI_COMMIT_REF_NAME
-    url: https://wa.c3auti.jorrit.de/$CI_ENVIRONMENT_SLUG/index.html
-    on_stop: stop_review
+  variables:
+    GIT_AUTHOR_NAME: CI Bot
+    GIT_AUTHOR_EMAIL: ci@bot
+  before_script:
+  - apk add bash git openssh-client
+  - chmod go= "$DEPLOY_KEY"
+  - export GIT_SSH_COMMAND='ssh -i "$DEPLOY_KEY" -o UserKnownHostsFile="$KNOWN_HOSTS" -o CheckHostIP=no'
   only:
     - branches
 
+review:
+  extends: .deploy-base
+  dependencies: []
+  script:
+  - bin/gen-review-links >index.html
+  - mkdir .public
+  - cp -a * .public/
+  - mv .public public
+  - bin/deploy
+  environment:
+    name: $CI_COMMIT_REF_NAME
+    url: https://c3auti.gitlab.io/rc3-wa-rendered/$CI_ENVIRONMENT_SLUG/index.html
+    on_stop: stop_review
+
 stop_review:
-  stage: deploy
+  extends: .deploy-base
   variables:
     GIT_STRATEGY: none
+  dependencies:
+  - utils
   script:
-  - cmd=$(jq -nc --arg env "$CI_ENVIRONMENT_SLUG" '{action:"destroy",environment:$env}')
-  - ssh -i "$DEPLOY_KEY" -o UserKnownHostsFile="$KNOWN_HOSTS" gitlab@wa.c3auti.jorrit.de "$cmd"
+  - bin/destroy
   when: manual
   environment:
     name: $CI_COMMIT_REF_NAME
     action: stop
-  only:
-    - branches

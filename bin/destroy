@@ -1,0 +1,38 @@
+#!/bin/bash
+
+set -e
+
+declare -a author_opts=(
+    -c user.email="$GIT_AUTHOR_EMAIL"
+    -c user.name="$GIT_AUTHOR_NAME"
+)
+
+declare -i try=0
+while true; do
+    rm -rf .rendered
+    git clone --depth=1 "$RENDER_REPO" .rendered
+
+    if old_id=$(<.rendered/job_id/"$CI_ENVIRONMENT_SLUG") && [[ $old_id -ge $CI_JOB_ID ]]; then
+        echo >&2 "There is already a deployment by newer job with id $old_id, aborting"
+        exit 1
+    fi
+
+    rm -f .rendered/job_id/"$CI_ENVIRONMENT_SLUG"
+    rm -rf .rendered/public/"$CI_ENVIRONMENT_SLUG"
+
+    git -C .rendered add job_id/"$CI_ENVIRONMENT_SLUG" public/"$CI_ENVIRONMENT_SLUG"
+    git -C .rendered "${author_opts[@]}" commit -m "Destroy $path" --allow-empty
+    git -C .rendered push --atomic && break
+
+    (( try++ ))
+    echo >&2 "Push failed (try: $try/5)"
+
+    if (( $try < 5 )); then
+        echo >&2 "Assuming concurrent push, retrying"
+    else
+        echo >&2 "Giving up"
+        exit 1
+    fi
+done
+    
+    
