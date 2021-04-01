@@ -376,7 +376,7 @@
                 {
                  "name":"jitsiRoom",
                  "type":"string",
-                 "value":"helpdesk"
+                 "value":"c3auti-helpdesk"
                 }],
          "type":"tilelayer",
          "visible":true,

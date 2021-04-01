@@ -262,7 +262,7 @@
                 {
                  "name":"jitsiRoom",
                  "type":"string",
-                 "value":"workshop"
+                 "value":"c3auti-workshop"
                 }],
          "type":"tilelayer",
          "visible":true,
