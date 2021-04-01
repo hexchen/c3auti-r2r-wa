@@ -226,7 +226,7 @@
                 {
                  "name":"exitSceneUrl",
                  "type":"string",
-                 "value":"c0c0bird.codeberg.page/main.json#start_c3auti"
+                 "value":"\/_\/global\/c0c0bird.codeberg.page\/main.json#start_c3auti"
                 }],
          "type":"tilelayer",
          "visible":true,
